@@ -16,12 +16,12 @@ public class Banker {
 		String iban = bankName + nextId;
 		this.nextId += 1;
 		switch (type) {
-		case CURRENT:
-			return new CurrentAccount(iban);
-		case SAVINGS:
-			return new SavingsAccount(iban);
-		default:
-			throw new UnsupportedOperationException();
+			case CURRENT:
+				return new CurrentAccount(iban);
+			case SAVINGS:
+				return new SavingsAccount(iban);
+			default:
+				throw new UnsupportedOperationException();
 		}
 	}
 }
