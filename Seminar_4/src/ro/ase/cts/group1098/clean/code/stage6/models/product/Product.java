@@ -13,7 +13,6 @@ public class Product {
 
 	MarketingStrategyInterface accountDiscountStrategy = null;
 
-	
 	public void setAccountDiscountStrategy(MarketingStrategyInterface accountDiscountStrategy) {
 		if(accountDiscountStrategy == null) {
 			throw new MissingMarketingStrategyException();
