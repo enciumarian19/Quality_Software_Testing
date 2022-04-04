@@ -1,0 +1,5 @@
+ 1 - Use Intention-Revealing names 
+ For example, in the print() method we don't know who is "vb" and it 
+ doesn't have any role since the method only prints a message, so we'll get rid of it.
+ In the calculate() method we have the same case, we don't know and have no use for the "temp"
+ variable, so we'll delete it.
