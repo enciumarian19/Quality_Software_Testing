@@ -3,3 +3,6 @@
  doesn't have any role since the method only prints a message, so we'll get rid of it.
  In the calculate() method we have the same case, we don't know and have no use for the "temp"
  variable, so we'll delete it.
+ 2 - Pick one word per concept
+ If we consider that the variables named with an underscore are two-word, then we can rename them using
+ the camelCase system. The naming convention with an underscore is wrong, or at least in my opinion.
