@@ -20,3 +20,9 @@
  10 - Use exceptions rather than return codes - there are some exceptions thrown for the negative cases of validations,
  but personally I would throw some custom ones, so we'll create a new package with exceptions containing an empty 
  exception class for example and throw that one.
+ 11 - make the class final if not used for inheritance - our classs is not used for inheritance, so we can make 
+ it final
+ 
+ 
+ 
+ 

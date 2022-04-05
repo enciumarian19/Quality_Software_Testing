@@ -2,7 +2,7 @@ package ro.ase.cts.group1098.homework1.clean.code.review;
 
 import ro.ase.cts.group1098.homework1.clean.code.exceptions.ArgOutOfRangeException;
 
-public class Account {
+public final class Account {
 	public double loanValue, rate;
 	public int daysActive, accountType;
 	public static final int STANDARD = 0, BUDGET = 1, PREMIUM = 2, SUPER_PREMIUM = 3;
