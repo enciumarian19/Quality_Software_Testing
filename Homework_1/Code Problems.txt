@@ -7,7 +7,11 @@
  If we consider that the variables named with an underscore are two-word, then we can rename them using
  the camelCase system. The naming convention with an underscore is wrong, or at least in my opinion.
  3 - Use Solution/Problem Domain Names - relatively correct
- 4 - classes should be small - our class in exactly the opposite, a very big class doing all sorts of things
+ 4 - classes should be small - our class is exactly the opposite, a very big class doing all sorts of things
  5 - Make sure code formatting is applied - the way the code is written is "ugly", too many or no spaces at all
  in some cases and other typing mistakes that do not respect the clean code principles, so we'll format its aspect
  a little selecting it all and then ctrl+shift+f in eclipse in my case.
+ 6 - Functions should be small - all of our functions are relatively small, except for the calculate() one,
+ which apparently computes and returns the total fee, but in a weird way
+ 7 - Do one thing - the loan() and getRate() methods print twice their parameter, once by the System.out.println()
+ action and twice by the return statement, so we'll reduce the output numbers to only one.

@@ -6,12 +6,12 @@ public class Account {
 	public static final int STANDARD = 0, BUDGET = 1, PREMIUM = 2, SUPER_PREMIUM = 3;
 
 	public double loan() {
-		System.out.println("The loan value is " + this.loanValue);
-		return loanValue;
+		System.out.println("The loan value is ");
+		return this.loanValue;
 	}
 
 	public double getRate() {
-		System.out.println("The rate is " + rate);
+		System.out.println("The rate is ");
 		return this.rate;
 	}
 
