@@ -1,5 +1,7 @@
 package ro.ase.cts.group1098.homework1.clean.code.review;
 
+import ro.ase.cts.group1098.homework1.clean.code.exceptions.ArgOutOfRangeException;
+
 public class Account {
 	public double loanValue, rate;
 	public int daysActive, accountType;
@@ -22,7 +24,7 @@ public class Account {
 
 	public void setValue(double value) throws Exception {
 		if (value < 0)
-			throw new Exception();
+			throw new ArgOutOfRangeException();
 		else {
 			loanValue = value;
 		}
@@ -51,7 +53,7 @@ public class Account {
 
 	public Account(double value, double rate, int accountType) throws Exception {
 		if (value < 0)
-			throw new Exception();
+			throw new ArgOutOfRangeException();
 		else {
 			loanValue = value;
 		}

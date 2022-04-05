@@ -15,3 +15,8 @@
  which apparently computes and returns the total fee, but in a weird way
  7 - Do one thing - the loan() and getRate() methods print twice their parameter, once by the System.out.println()
  action and twice by the return statement, so we'll reduce the output numbers to only one.
+ 8 - Don't repeat yourself - mostly correct, there aren't any code snippets copy - pasted throughout the class
+ 9 - Explain yourself in code - There are some comments in the class, not many but a few of them.
+ 10 - Use exceptions rather than return codes - there are some exceptions thrown for the negative cases of validations,
+ but personally I would throw some custom ones, so we'll create a new package with exceptions containing an empty 
+ exception class for example and throw that one.
