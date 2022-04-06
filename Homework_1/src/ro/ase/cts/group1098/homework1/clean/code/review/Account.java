@@ -5,7 +5,7 @@ import ro.ase.cts.group1098.homework1.clean.code.exceptions.ArgOutOfRangeExcepti
 public final class Account {
 	public double loanValue, rate;
 	public int daysActive, accountType;
-	public static final int STANDARD = 0, BUDGET = 1, PREMIUM = 2, SUPER_PREMIUM = 3;
+	public static float brokersFee = 0.125F;
 
 	public double loan() {
 		System.out.println("The loan value is ");
@@ -39,18 +39,33 @@ public final class Account {
 		System.out.println("This is an account");
 	}
 
+	public static double computeAnnualInterestRate(Account[] accounts) {
+		Account account;
+		double annualInterestRate = 0.0;
+		for (int i = 0; i < accounts.length; i++) {
+			account = accounts[i];
+			annualInterestRate =  Math.pow(account.rate, (account.daysActive) / 365);
+		}
+		
+		return annualInterestRate;
+				
+	}
+	
 	public static double calculate(Account[] accounts) {
 		double totalFee = 0.0;
 		Account account;
 		for (int i = 0; i < accounts.length; i++) {
 			account = accounts[i];
-			if (account.accountType == Account.PREMIUM || account.accountType == Account.SUPER_PREMIUM)
-				totalFee += .0125 * ( // 1.25% broker's fee
-				account.loanValue * Math.pow(account.rate, (account.daysActive / 365)) - account.loanValue); // interest-principal
+			if (account.accountType == AccountType.PREMIUM.getAccountType() || 
+					account.accountType == AccountType.SUPER_PREMIUM.getAccountType())
+				totalFee += brokersFee * ( // 1.25% broker's fee
+				account.loanValue * computeAnnualInterestRate(accounts)); // interest-principal
 		}
 		return totalFee;
 	}
 
+	
+	// the constructor
 	public Account(double value, double rate, int accountType) throws Exception {
 		if (value < 0)
 			throw new ArgOutOfRangeException();
