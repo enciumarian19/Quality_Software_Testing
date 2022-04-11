@@ -5,7 +5,7 @@ import ro.ase.cts.group1098.homework1.clean.code.exceptions.ArgOutOfRangeExcepti
 public final class Account {
 	public double loanValue, rate;
 	public int daysActive, accountType;
-	public static float brokersFee = 0.125F;
+	public static float brokersFee = 0.0125F;
 
 	public double loan() {
 		System.out.println("The loan value is ");
